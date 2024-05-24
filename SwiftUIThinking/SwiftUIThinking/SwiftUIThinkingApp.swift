@@ -11,7 +11,8 @@ import SwiftUI
 struct SwiftUIThinkingApp: App {
     var body: some Scene {
         WindowGroup {
-            InitializedView(count: 5, fruit: .apple)
+//            InitializedView(count: 5, fruit: .apple)
+            ContentView()
         }
     }
 }

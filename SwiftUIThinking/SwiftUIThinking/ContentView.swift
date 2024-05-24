@@ -9,8 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("te")
+        HStack{
+            
+        }
+        NavigationView{
+            VStack{
+                NavigationLink("Init and Enum",destination: InitializedView(count: 5, fruit: .apple))
+                    .padding()
+                NavigationLink("ForEach",destination: ForEachDataView())
+                    .padding()
+                NavigationLink("ScrollView",destination: ScrollView2BootCamp())
+                    .padding()
 
+            }
+        }
     }
 }
 

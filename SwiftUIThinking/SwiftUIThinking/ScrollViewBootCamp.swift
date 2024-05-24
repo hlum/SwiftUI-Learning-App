@@ -44,6 +44,8 @@ struct ScrollView2BootCamp: View {
                 }
             }
         }
+        ButtonCodePreview(code: .scrollViewBootCamp)
+            .padding()
     }
 }
 #Preview {
