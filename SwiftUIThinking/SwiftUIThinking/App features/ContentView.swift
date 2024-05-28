@@ -17,7 +17,8 @@ let lessons = [
     Lessons(title: "Transition", destination: AnyView(TransitionBootcamp())),
     Lessons(title:"List",destination: AnyView(ListBootcamp())),
     Lessons(title: "Alert", destination: AnyView(AlertBc())),
-    Lessons(title: "ActionSheet", destination: AnyView(ActionSheetBootcamp()))
+    Lessons(title: "ActionSheet", destination: AnyView(ActionSheetBootcamp())),
+    Lessons(title: "PlaySound", destination: AnyView(PlaySound()))
 ]
 
 struct ContentView: View {
@@ -29,12 +30,14 @@ struct ContentView: View {
                     
                     NavigationLink(item.title, destination: item.destination)
                         .padding()
-                    
+                                            
                 }
+
                 
             }
             .listStyle(SidebarListStyle())
             .navigationTitle("SwiftUI Learning")
+    
             
             
             
