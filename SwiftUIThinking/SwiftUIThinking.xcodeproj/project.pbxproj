@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F7CA3A02C02117A004DE24F /* TenaryOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7CA39F2C02117A004DE24F /* TenaryOperator.swift */; };
+		7F7CA3A22C0215DA004DE24F /* AnimationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7CA3A12C0215DA004DE24F /* AnimationBootcamp.swift */; };
+		7F7CA3A42C021CEB004DE24F /* AnimationTimingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7CA3A32C021CEB004DE24F /* AnimationTimingBootcamp.swift */; };
+		7F7CA3AC2C03436E004DE24F /* TransitionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7CA3AB2C03436E004DE24F /* TransitionBootcamp.swift */; };
+		7F7CA3AE2C034935004DE24F /* SheetsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7CA3AD2C034935004DE24F /* SheetsBootcamp.swift */; };
 		7FB59E972BFF4D28000948E8 /* SwiftUIThinkingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB59E962BFF4D28000948E8 /* SwiftUIThinkingApp.swift */; };
 		7FB59E992BFF4D28000948E8 /* InitializedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB59E982BFF4D28000948E8 /* InitializedView.swift */; };
 		7FB59E9B2BFF4D32000948E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB59E9A2BFF4D32000948E8 /* Assets.xcassets */; };
@@ -15,9 +20,18 @@
 		7FB59EA72BFF71E1000948E8 /* ScrollViewBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB59EA62BFF71E1000948E8 /* ScrollViewBootCamp.swift */; };
 		7FB59EA92BFF7935000948E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB59EA82BFF7935000948E8 /* ContentView.swift */; };
 		7FB59EAB2BFF79D0000948E8 /* ButtonCodePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB59EAA2BFF79D0000948E8 /* ButtonCodePreview.swift */; };
+		7FE06FE32C056855001CCD66 /* ActionSheetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE06FE22C056855001CCD66 /* ActionSheetBootcamp.swift */; };
+		7FFE79BB2C04517800A9F501 /* ListBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE79BA2C04517800A9F501 /* ListBootcamp.swift */; };
+		7FFE79BD2C045E9000A9F501 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE79BC2C045E9000A9F501 /* PlaySound.swift */; };
+		7FFE79BF2C0467A300A9F501 /* AlertBc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE79BE2C0467A300A9F501 /* AlertBc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F7CA39F2C02117A004DE24F /* TenaryOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenaryOperator.swift; sourceTree = "<group>"; };
+		7F7CA3A12C0215DA004DE24F /* AnimationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBootcamp.swift; sourceTree = "<group>"; };
+		7F7CA3A32C021CEB004DE24F /* AnimationTimingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTimingBootcamp.swift; sourceTree = "<group>"; };
+		7F7CA3AB2C03436E004DE24F /* TransitionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionBootcamp.swift; sourceTree = "<group>"; };
+		7F7CA3AD2C034935004DE24F /* SheetsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetsBootcamp.swift; sourceTree = "<group>"; };
 		7FB59E932BFF4D28000948E8 /* SwiftUIThinking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIThinking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB59E962BFF4D28000948E8 /* SwiftUIThinkingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIThinkingApp.swift; sourceTree = "<group>"; };
 		7FB59E982BFF4D28000948E8 /* InitializedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializedView.swift; sourceTree = "<group>"; };
@@ -27,6 +41,10 @@
 		7FB59EA62BFF71E1000948E8 /* ScrollViewBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewBootCamp.swift; sourceTree = "<group>"; };
 		7FB59EA82BFF7935000948E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7FB59EAA2BFF79D0000948E8 /* ButtonCodePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCodePreview.swift; sourceTree = "<group>"; };
+		7FE06FE22C056855001CCD66 /* ActionSheetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetBootcamp.swift; sourceTree = "<group>"; };
+		7FFE79BA2C04517800A9F501 /* ListBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBootcamp.swift; sourceTree = "<group>"; };
+		7FFE79BC2C045E9000A9F501 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		7FFE79BE2C0467A300A9F501 /* AlertBc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +58,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F7CA3A92C02304E004DE24F /* App features */ = {
+			isa = PBXGroup;
+			children = (
+				7FB59E962BFF4D28000948E8 /* SwiftUIThinkingApp.swift */,
+				7FB59EA82BFF7935000948E8 /* ContentView.swift */,
+				7F7CA3AD2C034935004DE24F /* SheetsBootcamp.swift */,
+				7FB59EAA2BFF79D0000948E8 /* ButtonCodePreview.swift */,
+			);
+			path = "App features";
+			sourceTree = "<group>";
+		};
+		7F7CA3AA2C023062004DE24F /* lessons */ = {
+			isa = PBXGroup;
+			children = (
+				7FB59E982BFF4D28000948E8 /* InitializedView.swift */,
+				7FB59EA42BFF6E06000948E8 /* ForEachView.swift */,
+				7FB59EA62BFF71E1000948E8 /* ScrollViewBootCamp.swift */,
+				7FE06FE22C056855001CCD66 /* ActionSheetBootcamp.swift */,
+				7F7CA3A12C0215DA004DE24F /* AnimationBootcamp.swift */,
+				7F7CA3A32C021CEB004DE24F /* AnimationTimingBootcamp.swift */,
+				7FFE79BA2C04517800A9F501 /* ListBootcamp.swift */,
+				7FFE79BC2C045E9000A9F501 /* PlaySound.swift */,
+				7F7CA39F2C02117A004DE24F /* TenaryOperator.swift */,
+				7F7CA3AB2C03436E004DE24F /* TransitionBootcamp.swift */,
+				7FFE79BE2C0467A300A9F501 /* AlertBc.swift */,
+			);
+			path = lessons;
+			sourceTree = "<group>";
+		};
 		7FB59E8A2BFF4D28000948E8 = {
 			isa = PBXGroup;
 			children = (
@@ -59,12 +106,8 @@
 		7FB59E952BFF4D28000948E8 /* SwiftUIThinking */ = {
 			isa = PBXGroup;
 			children = (
-				7FB59E962BFF4D28000948E8 /* SwiftUIThinkingApp.swift */,
-				7FB59EA82BFF7935000948E8 /* ContentView.swift */,
-				7FB59E982BFF4D28000948E8 /* InitializedView.swift */,
-				7FB59EAA2BFF79D0000948E8 /* ButtonCodePreview.swift */,
-				7FB59EA42BFF6E06000948E8 /* ForEachView.swift */,
-				7FB59EA62BFF71E1000948E8 /* ScrollViewBootCamp.swift */,
+				7F7CA3A92C02304E004DE24F /* App features */,
+				7F7CA3AA2C023062004DE24F /* lessons */,
 				7FB59E9A2BFF4D32000948E8 /* Assets.xcassets */,
 				7FB59E9C2BFF4D32000948E8 /* Preview Content */,
 			);
@@ -150,11 +193,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FB59EA52BFF6E06000948E8 /* ForEachView.swift in Sources */,
+				7F7CA3A42C021CEB004DE24F /* AnimationTimingBootcamp.swift in Sources */,
+				7FFE79BB2C04517800A9F501 /* ListBootcamp.swift in Sources */,
 				7FB59EA92BFF7935000948E8 /* ContentView.swift in Sources */,
+				7F7CA3A22C0215DA004DE24F /* AnimationBootcamp.swift in Sources */,
 				7FB59EAB2BFF79D0000948E8 /* ButtonCodePreview.swift in Sources */,
+				7FFE79BF2C0467A300A9F501 /* AlertBc.swift in Sources */,
 				7FB59EA72BFF71E1000948E8 /* ScrollViewBootCamp.swift in Sources */,
 				7FB59E992BFF4D28000948E8 /* InitializedView.swift in Sources */,
+				7F7CA3AC2C03436E004DE24F /* TransitionBootcamp.swift in Sources */,
 				7FB59E972BFF4D28000948E8 /* SwiftUIThinkingApp.swift in Sources */,
+				7F7CA3A02C02117A004DE24F /* TenaryOperator.swift in Sources */,
+				7FFE79BD2C045E9000A9F501 /* PlaySound.swift in Sources */,
+				7FE06FE32C056855001CCD66 /* ActionSheetBootcamp.swift in Sources */,
+				7F7CA3AE2C034935004DE24F /* SheetsBootcamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
