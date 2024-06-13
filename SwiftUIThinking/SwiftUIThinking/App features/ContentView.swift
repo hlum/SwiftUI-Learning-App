@@ -1,4 +1,5 @@
 import SwiftUI
+import AVFAudio
 
 // Define a model for the menu items
 struct Lessons: Identifiable {
@@ -18,26 +19,42 @@ let lessons = [
     Lessons(title:"List",destination: AnyView(ListBootcamp())),
     Lessons(title: "Alert", destination: AnyView(AlertBc())),
     Lessons(title: "ActionSheet", destination: AnyView(ActionSheetBootcamp())),
-    Lessons(title: "PlaySound", destination: AnyView(PlaySound()))
+    Lessons(title: "PlaySound", destination: AnyView(PlaySound())),
+    Lessons(title: "Text Field", destination: AnyView(TextFieldBootcamp())),
+    Lessons(title: "TenaryOperator", destination: AnyView(TenaryOperator())),
+    Lessons(title: "Test API", destination: AnyView(API())),
+    Lessons(title: "AppStorage", destination: AnyView(AppStorageBootcamp()))
+    
 ]
 
 struct ContentView: View {
+    @State private var searchText:String = ""
     var body: some View {
-        NavigationView {
-            List(lessons) { item in
-                HStack {
-                    Image(systemName: "swift")
-                    
-                    NavigationLink(item.title, destination: item.destination)
-                        .padding()
-                                            
+        NavigationStack {
+            List {
+                ForEach(lessons.filter{ searchText.isEmpty || $0.title.localizedStandardContains(searchText)}){item in
+                    HStack{
+                        Image(systemName:"swift")
+                        NavigationLink(item.title,destination: item.destination)
+                            .padding()
+                    }
                 }
-
-                
-            }
-            .listStyle(SidebarListStyle())
-            .navigationTitle("SwiftUI Learning")
-    
+            }.searchable(text: $searchText)
+                .navigationTitle("Swiftul Learning")
+            
+            //            List(lessons) { item in
+            //                HStack {
+            //                    Image(systemName: "swift")
+            //
+            //                    NavigationLink(item.title, destination: item.destination)
+            //                        .padding()
+            //
+            //                }
+            //
+            //            }
+            //            .listStyle(SidebarListStyle())
+            //            .navigationTitle("SwiftUI Learning")
+            
             
             
             
@@ -45,7 +62,10 @@ struct ContentView: View {
             
         }
         
+        
+        
     }
+    
 }
 
 #Preview {

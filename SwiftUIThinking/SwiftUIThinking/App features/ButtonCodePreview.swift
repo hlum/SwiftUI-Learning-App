@@ -525,7 +525,7 @@ struct TransitionBootcamp: View {
                 .background(Color.black)
                 .cornerRadius(10)
         }
-        .sheet(isPresented: $isPresented) {
+        .sheet(isPresented: $isPresented){
             
             ZStack {
                 Color.black
