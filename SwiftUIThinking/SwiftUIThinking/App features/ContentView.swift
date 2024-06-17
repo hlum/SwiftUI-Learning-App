@@ -24,7 +24,11 @@ let lessons = [
     Lessons(title: "TenaryOperator", destination: AnyView(TenaryOperator())),
     Lessons(title: "Test API", destination: AnyView(API())),
     Lessons(title: "AppStorage", destination: AnyView(AppStorageBootcamp())),
-    Lessons(title: "onBoardingwithAppStorage", destination: AnyView(IntroView()))
+    Lessons(title: "onBoardingwithAppStorage", destination: AnyView(IntroView())),
+    Lessons(title: "AsyncImage", destination: AnyView(AsyncImageBootcamp())),
+    Lessons(title: "BackgroundMaterials", destination: AnyView(BackgroundMaterialBootcamp())),
+    Lessons(title: "TextSelection", destination: AnyView(TextSelectionBootcamp())),
+    Lessons(title: "FocusState", destination: AnyView(FocusStateBootcamp()))
     
 ]
 
@@ -36,11 +40,19 @@ struct ContentView: View {
                 ForEach(lessons.filter{ searchText.isEmpty || $0.title.localizedStandardContains(searchText)}){item in
                     HStack{
                         Image(systemName:"swift")
-                        NavigationLink(item.title,destination: item.destination)
-                            .padding()
+                        NavigationLink(item.title,
+                                       destination: item.destination)
+                        .padding()
                     }
                 }
-            }.searchable(text: $searchText)
+            }.searchable(text: $searchText,prompt: "Search lessons")
+                .submitLabel(.next)
+                .onSubmit(of: .search) {
+                    // Handle search submission
+                    print("Search submitted: \(searchText)")
+                    // Add any additional actions here
+                }
+            
                 .navigationTitle("Swiftul Learning")
             
             //            List(lessons) { item in

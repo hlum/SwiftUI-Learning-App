@@ -498,6 +498,202 @@ struct TransitionBootcamp: View {
     TransitionBootcamp()
 }
 """
+        case .AsyncImageView:
+            self.code = """
+//
+//  AsyncImageBootcamp.swift
+//  SwiftUIThinking
+//
+//  Created by Hlwan Aung Phyo on 2024/06/15.
+//
+
+import SwiftUI
+
+
+/**
+ case empty -> No image is loadeed
+ case sucess(Image) -> An image sucessfully loaded
+ case failure(Error) -> An image is failed to load with an error
+ 
+ **/
+
+struct AsyncImageBootcamp: View {
+    let url = URL(string: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9PQoOkqv5ngE_XGDNJSS5DJ2XgVIG8b5y8A&s")
+    var body: some View {
+        AsyncImage(url: url) { phase in
+            switch phase {
+            case .empty:
+                ProgressView()
+            case .success(let image):
+                image
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 200)
+                    .cornerRadius(20)
+                
+            case .failure(let error):
+                Image(systemName:"questionmark")
+                    .font(.headline)
+            default:
+                Image(systemName:"questionmark")
+                    .font(.headline)
+            }
+        }
+        
+        //        AsyncImage(url: url,content: { returnedImage in
+        //            returnedImage
+        //                .resizable()
+        //                .scaledToFit()
+        //                .frame(width: 200, height: 200)
+        //                .cornerRadius(20)
+        //
+        //        } ,placeholder: {
+        //            ProgressView()
+        //        })
+        
+    }
+}
+
+#Preview {
+    AsyncImageBootcamp()
+}
+""" case .BMaterialBootcamp:
+            self.code = """
+//
+//  BackgroundMaterialBootcamp.swift
+//  SwiftUIThinking
+//
+//  Created by Hlwan Aung Phyo on 2024/06/15.
+//
+
+import SwiftUI
+
+struct BackgroundMaterialBootcamp: View {
+    var body: some View {
+        VStack{
+            Spacer()
+            
+            VStack{
+                RoundedRectangle(cornerRadius: 4)
+                    .frame(width:50,height:4)
+                    .padding()
+                Spacer()
+            }
+            .frame(height: 350)
+            .frame(maxWidth: .infinity)
+            .background(.ultraThinMaterial)
+            .cornerRadius(30)
+            ButtonCodePreview(code: .BMaterialBootcamp)
+        }
+        .ignoresSafeArea()
+        .background(
+            Image("ImgGf")
+                .resizable()
+                .scaledToFit()
+                .frame(maxWidth: .infinity,maxHeight: .infinity)
+        )
+    }
+}
+
+#Preview {
+    BackgroundMaterialBootcamp()
+}
+"""
+        case .TextSelectionBootcamp:
+            self.code =  """
+//
+//  TextSelectionBootcamp.swift
+//  SwiftUIThinking
+//
+//  Created by Hlwan Aung Phyo on 2024/06/15.
+//
+
+import SwiftUI
+
+struct TextSelectionBootcamp: View {
+    var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            .textSelection(.enabled)
+        ButtonCodePreview(code: .TextSelectionBootcamp)
+    }
+}
+
+#Preview {
+    TextSelectionBootcamp()
+}
+"""
+        case .FocusStateBootcamp:
+            self.code = """
+//
+//  FocusStateBootcamp.swift
+//  SwiftUIThinking
+//
+//  Created by Hlwan Aung Phyo on 2024/06/15.
+//
+
+import SwiftUI
+
+struct FocusStateBootcamp: View {
+    
+    enum OnboardingFields: Hashable{
+        case username
+        case password
+    }
+    
+    
+    @State private var username:String = ""
+//    @FocusState private var usernameInFocus:Bool
+    
+    @State private var password:String = ""
+//    @FocusState private var passwordInFocus:Bool
+    
+    @FocusState private var fieldInFocus: OnboardingFields?
+
+    var body: some View {
+        VStack(spacing:20){
+            TextField("Add your name here...", text: $username)
+                .focused($fieldInFocus,equals: .username)
+                .padding(.leading)
+                .frame(height: 55)
+                .frame(maxWidth: .infinity)
+                .background(Color.gray.brightness(0.3))
+                .cornerRadius(10)
+            SecureField("Add your password here...", text: $password)
+                .focused($fieldInFocus,equals: .password)
+                .padding(.leading)
+                .frame(height: 55)
+                .frame(maxWidth: .infinity)
+                .background(Color.gray.brightness(0.3))
+                .cornerRadius(10)
+            
+            Button("Sign UP"){
+                let usernameIsValid = !username.isEmpty
+                let passwordIsValid = !password.isEmpty
+                
+                if usernameIsValid && passwordIsValid{
+                    print("Signed up")                }else if usernameIsValid{
+                    fieldInFocus = .password
+                }else{
+                    fieldInFocus = .username
+                }
+            }
+            .buttonStyle(.borderedProminent)
+            .controlSize(.extraLarge)
+            
+        }
+        .padding(70)
+        .onAppear{
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                self.fieldInFocus = .username
+            }
+        }
+    }
+}
+
+#Preview {
+    FocusStateBootcamp()
+}
+"""
         }
     }
     
@@ -512,6 +708,10 @@ struct TransitionBootcamp: View {
         case TransitionTimingBc
         case ListBc
         case ActionSheet
+        case AsyncImageView
+        case BMaterialBootcamp
+        case TextSelectionBootcamp
+        case FocusStateBootcamp
     }
     
     var body: some View {
@@ -535,6 +735,7 @@ struct TransitionBootcamp: View {
                         Text(code) // Display the selected code
                             .padding()
                             .foregroundColor(.white)
+                            .textSelection(.enabled)
                     }
                     .padding()
                 }

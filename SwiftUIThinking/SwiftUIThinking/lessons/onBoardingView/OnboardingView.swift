@@ -17,20 +17,32 @@ struct OnboardingView: View {
         3 - add gender
      
      **/
+    
+    @State var onboardingState :Int = 0
     let transition:AnyTransition = .asymmetric(
         insertion: .move(edge: .trailing),
         removal: .move(edge: .leading))
     
+    //onboarding inputs
     @State var name:String = ""
     @State var age :Double = 50
-    @State var gender : String? = nil
-    @State var onboardingState :Int = 0
+    @State var gender : String = ""
+    
+    //for the alert
+    @State var alertTitle:String = ""
+    @State var showAlert:Bool = false
+    
+    //app storage
+    @AppStorage("name") var currentUserName : String?
+    @AppStorage("age") var currentUserAge:Int?
+    @AppStorage("gender") var currentUserGender : String?
+    @AppStorage("signed_in") var currentUserSignedIn:Bool = false
+
     
     
     var body: some View {
         ZStack{
            //content
-            Color(.purple)
             ZStack{
                 switch onboardingState{
                 case 0:
@@ -60,7 +72,10 @@ struct OnboardingView: View {
             }
             .padding(30)
         }
-        .ignoresSafeArea()
+        .alert(isPresented: $showAlert, content: {
+            return Alert(title: Text(alertTitle))
+                         })
+        
     }
     }
 
@@ -166,19 +181,20 @@ extension OnboardingView{
                 .foregroundColor(.white)
             
             
-            Picker("Select a gender",
+            Picker("Select a gender"
+                ,
                    selection: $gender) {
                 Text("Male").tag("Male")
                 Text("Female").tag("Female")
                 Text("Non-Binary").tag("Non-Binary")
             }
-            .pickerStyle(MenuPickerStyle())
-            .frame(maxWidth: .infinity)
-            .frame(height: 30)
-            .padding()
-            .background(Color.white)
-            .cornerRadius(10)
-            
+                   .frame(maxWidth: .infinity)
+                   .frame(height: 30)
+                   .padding()
+                   .background(Color.white)
+                   .cornerRadius(10)
+                   .pickerStyle(MenuPickerStyle())
+                        
             Spacer()
             Spacer()
         }
@@ -192,14 +208,42 @@ extension OnboardingView{
 extension OnboardingView{
     
     func handleNextButtonPressed(){
+        //Check inputs
+        switch onboardingState{
+            
+        case 1:
+            guard name.count >= 3 else{
+                showAlertTitle(title:"Your name must be at least 3 characters long! ")
+                return
+            }
+            break
+        default:
+            break
+        }
+        //Go to next section
         
         if onboardingState == 3{
-            //sign in
+            signIn()
         }else{
             withAnimation(.spring()){
                 onboardingState += 1
             }
         }
+    }
+    func signIn(){
+        currentUserName = name
+        currentUserAge = Int(age)
+        currentUserGender = gender
+        withAnimation(.spring()) {
+            currentUserSignedIn = true
+        }
+      
+    }
+    
+    func showAlertTitle(title :String){
+        alertTitle = title
+        showAlert.toggle()
+
     }
 }
 

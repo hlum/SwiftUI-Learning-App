@@ -20,16 +20,27 @@ struct IntroView: View {
             .ignoresSafeArea()
             
             if currentUserSignedIn {
-                Text("profile view")
+                ProfileView()
+                    .transition(.asymmetric(
+                        insertion:
+                                .move(edge:.bottom),
+                        removal:
+                                .move(edge: .top)))
             }else{
                 OnboardingView()
-            }
+                    .background(.purple)
+                    .transition(.asymmetric(
+                        insertion:
+                                .move(edge:.top),
+                        removal:
+                                .move(edge: .bottom)))
+                                }
             //if user sign in
             //profile view
             //else
             //onboarding
             
-        }
+        }.animation(.bouncy(), value: currentUserSignedIn)
     }
 }
 
