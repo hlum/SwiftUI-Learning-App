@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F239D3C2C255D0700278186 /* LongPressGestureBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F239D3B2C255D0700278186 /* LongPressGestureBootcamp.swift */; };
 		7F23A14F2C1D8E0E00581B84 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23A14E2C1D8E0E00581B84 /* ProfileView.swift */; };
 		7F23A1512C1D97C200581B84 /* AsyncImageBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23A1502C1D97C200581B84 /* AsyncImageBootcamp.swift */; };
 		7F23A1532C1DA38000581B84 /* BackgroundMaterialBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23A1522C1DA38000581B84 /* BackgroundMaterialBootcamp.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F239D3B2C255D0700278186 /* LongPressGestureBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGestureBootcamp.swift; sourceTree = "<group>"; };
 		7F23A14E2C1D8E0E00581B84 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		7F23A1502C1D97C200581B84 /* AsyncImageBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageBootcamp.swift; sourceTree = "<group>"; };
 		7F23A1522C1DA38000581B84 /* BackgroundMaterialBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMaterialBootcamp.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				7F23A15A2C1DB49900581B84 /* FocusStateBootcamp.swift */,
 				7F23A15C2C1DDF3B00581B84 /* SubmitTextFieldBootcamp.swift */,
 				7FB1E9842C1FF98F0050B03E /* ContentUnavailableBootcamp.swift */,
+				7F239D3B2C255D0700278186 /* LongPressGestureBootcamp.swift */,
 				7F4240A02C1984EB00AB7F4E /* onBoardingView */,
 			);
 			path = lessons;
@@ -272,6 +275,7 @@
 				7F23A15D2C1DDF3B00581B84 /* SubmitTextFieldBootcamp.swift in Sources */,
 				7FB59EAB2BFF79D0000948E8 /* ButtonCodePreview.swift in Sources */,
 				7FFE79BF2C0467A300A9F501 /* AlertBc.swift in Sources */,
+				7F239D3C2C255D0700278186 /* LongPressGestureBootcamp.swift in Sources */,
 				7F23A15B2C1DB49900581B84 /* FocusStateBootcamp.swift in Sources */,
 				7FF583682C07044500B32081 /* TextFieldBootcamp.swift in Sources */,
 				7FB59EA72BFF71E1000948E8 /* ScrollViewBootCamp.swift in Sources */,

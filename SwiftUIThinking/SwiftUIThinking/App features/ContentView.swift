@@ -29,56 +29,43 @@ let lessons = [
     Lessons(title: "BackgroundMaterials", destination: AnyView(BackgroundMaterialBootcamp())),
     Lessons(title: "TextSelection", destination: AnyView(TextSelectionBootcamp())),
     Lessons(title: "FocusState", destination: AnyView(FocusStateBootcamp()))
-    
 ]
 
 struct ContentView: View {
-    @State private var searchText:String = ""
+    @State private var searchText: String = ""
+    
+    var filteredLessons: [Lessons] {
+        lessons.filter { searchText.isEmpty || $0.title.localizedStandardContains(searchText) }
+    }
+    
     var body: some View {
         NavigationStack {
             List {
-                ForEach(lessons.filter{ searchText.isEmpty || $0.title.localizedStandardContains(searchText)}){item in
-                    HStack{
-                        Image(systemName:"swift")
-                        NavigationLink(item.title,
-                                       destination: item.destination)
-                        .padding()
+                if filteredLessons.isEmpty {
+                    ContentUnavailableView
+                    .search(text:searchText)
+                } else {
+                    ForEach(filteredLessons) { item in
+                        HStack {
+                            Image(systemName: "swift")
+                            NavigationLink(item.title, destination: item.destination)
+                                .padding()
+                        }
                     }
                 }
-            }.searchable(text: $searchText,prompt: "Search lessons")
-                .submitLabel(.next)
-                .onSubmit(of: .search) {
-                    // Handle search submission
-                    print("Search submitted: \(searchText)")
-                    // Add any additional actions here
-                }
-            
-                .navigationTitle("Swiftul Learning")
-            
-            //            List(lessons) { item in
-            //                HStack {
-            //                    Image(systemName: "swift")
-            //
-            //                    NavigationLink(item.title, destination: item.destination)
-            //                        .padding()
-            //
-            //                }
-            //
-            //            }
-            //            .listStyle(SidebarListStyle())
-            //            .navigationTitle("SwiftUI Learning")
-            
-            
-            
-            
-            
-            
+            }
+            .searchable(text: $searchText, prompt: "Search lessons")
+            .submitLabel(.next)
+            .onSubmit(of: .search) {
+                // Handle search submission
+                print("Search submitted: \(searchText)")
+                // Add any additional actions here
+            }
+            .navigationTitle("SwiftUI Learning")
         }
-        
-        
-        
     }
     
+
 }
 
 #Preview {
