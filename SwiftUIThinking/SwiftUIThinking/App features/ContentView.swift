@@ -28,7 +28,12 @@ let lessons = [
     Lessons(title: "AsyncImage", destination: AnyView(AsyncImageBootcamp())),
     Lessons(title: "BackgroundMaterials", destination: AnyView(BackgroundMaterialBootcamp())),
     Lessons(title: "TextSelection", destination: AnyView(TextSelectionBootcamp())),
-    Lessons(title: "FocusState", destination: AnyView(FocusStateBootcamp()))
+    Lessons(title: "FocusState", destination: AnyView(FocusStateBootcamp())),
+    Lessons(title: "Long Press Gesture", destination: AnyView(LongPressGestureBootcamp())),
+    Lessons(title: "Magnification Gesture", destination: AnyView(MagnificationGestureBootcamp())),
+    Lessons(title: "Mask Bootcamp", destination: AnyView(MaskBootcamp())),
+    Lessons(title: "Haptic", destination: AnyView(HapticBootcamp())),
+    Lessons(title: "Local Notification", destination: AnyView(NotificationBootcamp()))
 ]
 
 struct ContentView: View {
