@@ -33,7 +33,7 @@ class NotificationManager{
         }
     }
     
-    func scheduleNotification(){
+    func scheduleNotification(_ time : Date){
         
         let content = UNMutableNotificationContent()
         
@@ -43,7 +43,7 @@ class NotificationManager{
         content.badge = 1
         
         //time
-        //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5.0, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: time.timeIntervalSinceNow, repeats: false)
         
         
         
@@ -59,17 +59,17 @@ class NotificationManager{
         
         
         //location
-        let coordinate = CLLocationCoordinate2D(latitude: 40.00,
-                                                longitude: 50.00)
-        
-        
-        let region = CLCircularRegion(center: coordinate,
-                                      radius: 100,
-                                      identifier: UUID().uuidString)
-        region.notifyOnEntry = true
-        region.notifyOnExit = false
-        
-        let trigger = UNLocationNotificationTrigger(region:region,repeats:true)
+//        let coordinate = CLLocationCoordinate2D(latitude: 40.00,
+//                                                longitude: 50.00)
+//        
+//        
+//        let region = CLCircularRegion(center: coordinate,
+//                                      radius: 100,
+//                                      identifier: UUID().uuidString)
+//        region.notifyOnEntry = true
+//        region.notifyOnExit = false
+//        
+//        let trigger = UNLocationNotificationTrigger(region:region,repeats:true)
         
         let request = UNNotificationRequest(identifier: UUID().uuidString,
                                             content: content,
@@ -92,20 +92,26 @@ class NotificationManager{
 
 
 struct NotificationBootcamp: View {
+    @State var pickedTime : Date = Date()
     var body: some View {
         VStack(spacing:40){
             Button("request permission"){
                 NotificationManager.instance.requestAuthorization()
             }
+            Text("Pick a time to notify")
+                .font(.title)
+            DatePicker("", selection: $pickedTime, displayedComponents: .hourAndMinute)
+                        .datePickerStyle(WheelDatePickerStyle())
+            
             Button("Schedule notification"){
-                NotificationManager.instance.scheduleNotification()
+                NotificationManager.instance.scheduleNotification(pickedTime)
             }
             
             Button("Cancel Notification"){
                 NotificationManager.instance.cancelNotification()
             }
         }
-        
+        .padding()
         .foregroundColor(.black)
         .onAppear{
             UIApplication.shared.applicationIconBadgeNumber = 0

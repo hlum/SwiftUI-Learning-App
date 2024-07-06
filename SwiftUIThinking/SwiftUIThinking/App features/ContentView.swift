@@ -33,7 +33,9 @@ let lessons = [
     Lessons(title: "Magnification Gesture", destination: AnyView(MagnificationGestureBootcamp())),
     Lessons(title: "Mask Bootcamp", destination: AnyView(MaskBootcamp())),
     Lessons(title: "Haptic", destination: AnyView(HapticBootcamp())),
-    Lessons(title: "Local Notification", destination: AnyView(NotificationBootcamp()))
+    Lessons(title: "Local Notification", destination: AnyView(NotificationBootcamp())),
+    Lessons(title: "Core Data", destination: AnyView(CoreDataBootcamp())),
+    Lessons(title: "CoreData Relationships", destination: AnyView(CoreDataRelationshipsBootcamp()))
 ]
 
 struct ContentView: View {
@@ -68,6 +70,7 @@ struct ContentView: View {
             }
             .navigationTitle("SwiftUI Learning")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
 

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MyCustomModel: Hashable{
     //    let id = UUID().uuidString
+    
     let title : String
     
     func hash(into hasher: inout Hasher) {
@@ -27,7 +28,6 @@ struct HashableBootcamp: View {
         MyCustomModel(title: "One")
         
     ]
-    
     
     var body: some View {
         ScrollView{
