@@ -55,6 +55,7 @@
 		7FFA88A62C474EC40099F460 /* CoreDataContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA88A32C474EC40099F460 /* CoreDataContainer.xcdatamodeld */; };
 		7FFA88A82C4752BF0099F460 /* DownloadWithCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA88A72C4752BF0099F460 /* DownloadWithCombine.swift */; };
 		7FFA88AA2C475B9E0099F460 /* TimerBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA88A92C475B9E0099F460 /* TimerBootcamp.swift */; };
+		7FFA88AC2C478EA00099F460 /* DragGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFA88AB2C478EA00099F460 /* DragGestureView.swift */; };
 		7FFE79BB2C04517800A9F501 /* ListBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE79BA2C04517800A9F501 /* ListBootcamp.swift */; };
 		7FFE79BD2C045E9000A9F501 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE79BC2C045E9000A9F501 /* PlaySound.swift */; };
 		7FFE79BF2C0467A300A9F501 /* AlertBc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE79BE2C0467A300A9F501 /* AlertBc.swift */; };
@@ -110,6 +111,7 @@
 		7FFA88A42C474EC40099F460 /* CoreDataContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataContainer.xcdatamodel; sourceTree = "<group>"; };
 		7FFA88A72C4752BF0099F460 /* DownloadWithCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DownloadWithCombine.swift; path = ../../DownloadWithCombine.swift; sourceTree = "<group>"; };
 		7FFA88A92C475B9E0099F460 /* TimerBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerBootcamp.swift; sourceTree = "<group>"; };
+		7FFA88AB2C478EA00099F460 /* DragGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGestureView.swift; sourceTree = "<group>"; };
 		7FFE79BA2C04517800A9F501 /* ListBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBootcamp.swift; sourceTree = "<group>"; };
 		7FFE79BC2C045E9000A9F501 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		7FFE79BE2C0467A300A9F501 /* AlertBc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBc.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				7F23A1582C1DAC1000581B84 /* ListSwipeActionsBootcamp.swift */,
 				7F23A15A2C1DB49900581B84 /* FocusStateBootcamp.swift */,
 				7F23A15C2C1DDF3B00581B84 /* SubmitTextFieldBootcamp.swift */,
+				7FFA88AB2C478EA00099F460 /* DragGestureView.swift */,
 				7FB1E9842C1FF98F0050B03E /* ContentUnavailableBootcamp.swift */,
 				7F4240A02C1984EB00AB7F4E /* onBoardingView */,
 			);
@@ -361,6 +364,7 @@
 				7F4240A42C19887100AB7F4E /* OnboardingView.swift in Sources */,
 				7F7CA3AE2C034935004DE24F /* SheetsBootcamp.swift in Sources */,
 				7F4ECD9A2C26C7BE00F0119F /* SoundEffectsBootcamp.swift in Sources */,
+				7FFA88AC2C478EA00099F460 /* DragGestureView.swift in Sources */,
 				7F494D212C2AAFE80044EFC8 /* CoreDataRelationshipsBootcamp.swift in Sources */,
 				7F4ECD982C26C33300F0119F /* MaskBootcamp.swift in Sources */,
 				7FF89EA82C096CCA0055E663 /* IfLetGuardBootcamp.swift in Sources */,

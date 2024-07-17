@@ -22,7 +22,6 @@ let lessons = [
     Lessons(title: "PlaySound", destination: AnyView(PlaySound())),
     Lessons(title: "Text Field", destination: AnyView(TextFieldBootcamp())),
     Lessons(title: "TenaryOperator", destination: AnyView(TenaryOperator())),
-    Lessons(title: "Test API", destination: AnyView(API())),
     Lessons(title: "AppStorage", destination: AnyView(AppStorageBootcamp())),
     Lessons(title: "onBoardingwithAppStorage", destination: AnyView(IntroView())),
     Lessons(title: "AsyncImage", destination: AnyView(AsyncImageBootcamp())),

@@ -12,7 +12,7 @@ struct SwiftUIThinkingApp: App {
     var body: some Scene {
         WindowGroup {
 //            InitializedView(count: 5, fruit: .apple)
-            BackgroundThreadBootcamp()
+            DragGestureView()
         }
     }
 }
