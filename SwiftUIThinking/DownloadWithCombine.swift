@@ -12,6 +12,7 @@ import Combine
 struct PostModel : Identifiable,Codable {
     let userID, id: Int
     let title, body: String
+    let test : Int = 2
 }
 
 class DownloadWithCombineViewModel:ObservableObject{
