@@ -9,10 +9,29 @@ import SwiftUI
 
 struct CircleButtonView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image(systemName:"heart.fill")
+            .font(.headline)
+            .foregroundColor(Color.theme.accent)
+            .frame(width:58,height: 50)
+            .background(
+                Circle()
+                    .foregroundColor(Color.theme.background)
+            )
+            .shadow(color: Color.theme.accent.opacity(0.25), radius: 10, x: 0.0, y: 0.0)
+            .padding()
+        
     }
 }
 
+
 #Preview {
-    CircleButtonView()
+    Group{
+        CircleButtonView()
+            .padding()
+        CircleButtonView()
+            .padding()
+            .colorScheme(.dark)
+    }
+    .previewLayout(.sizeThatFits)
+    
 }

@@ -2,19 +2,22 @@ import SwiftUI
 
 struct DragGestureView: View {
     var body: some View {
-        ScrollView {
-            VStack(spacing: 20) {
-                ForEach(0..<20) { index in
+        ScrollView(.horizontal,showsIndicators: false) {
+            HStack(spacing: 20) {
+                ForEach(0..<200) { index in
                     GeometryReader { geo in
                         RoundedRectangle(cornerRadius: 25)
-                            .fill(Color.blue)
+                            .fill(Color.red)
                             .frame(height: 150)
                             .scaleEffect(scaleValue(geo: geo))
                             .opacity(opacityValue(geo: geo))
                             .rotation3DEffect(
                                 .degrees(rotationValue(geo: geo)),
                                 axis: (x: 0, y: 1, z: 0)
+                                    
                             )
+                            .animation(.linear(duration:0.001), value: geo.frame(in: .global).midX)
+
                     }
                     .frame(height: 150)
                 }
@@ -46,3 +49,6 @@ struct DragGestureView: View {
 }
 
 
+#Preview{
+    DragGestureView()
+}
