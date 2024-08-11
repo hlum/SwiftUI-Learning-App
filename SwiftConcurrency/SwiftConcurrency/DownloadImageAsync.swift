@@ -19,7 +19,7 @@ class DownloadImageAsyncImageLoader: ObservableObject{
         else{
             return nil
         }
-        return image
+        return image 
     }
     
     

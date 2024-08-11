@@ -33,8 +33,8 @@ let lessons = [
     Lessons(title: "Mask Bootcamp", destination: AnyView(MaskBootcamp())),
     Lessons(title: "Haptic", destination: AnyView(HapticBootcamp())),
     Lessons(title: "Local Notification", destination: AnyView(NotificationBootcamp())),
-    Lessons(title: "Core Data", destination: AnyView(CoreDataBootcamp())),
-    Lessons(title: "CoreData Relationships", destination: AnyView(CoreDataRelationshipsBootcamp()))
+//    Lessons(title: "Core Data", destination: AnyView(CoreDataBootcamp())),
+//    Lessons(title: "CoreData Relationships", destination: AnyView(CoreDataRelationshipsBootcamp()))
 ]
 
 struct ContentView: View {
