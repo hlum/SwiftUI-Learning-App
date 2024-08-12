@@ -56,7 +56,7 @@ class DownloadImageAsyncModel : ObservableObject{
     
         func fetchImageWithCombine(){
             loader.downloadWithCombine()
-                .sink { _ in
+                .sink {_ in
                     
                 } receiveValue: {[weak self] image in
                     self?.image = image

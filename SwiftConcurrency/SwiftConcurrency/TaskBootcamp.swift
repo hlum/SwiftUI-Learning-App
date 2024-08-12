@@ -13,7 +13,7 @@ class TaskBootcampViewModel: ObservableObject {
     
     func fetchImage2() async {
         do{
-            guard let url = URL(string: "https://picsum.photos/4000") else {return}
+            guard let url = URL(string: "https://picsum.photos/300") else {return}
             let (data, _) = try await URLSession.shared.data(from:url,delegate:nil)
             
             await MainActor.run{
