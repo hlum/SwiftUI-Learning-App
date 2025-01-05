@@ -59,7 +59,7 @@ struct HomeView:View {
                 .font(.headline)
         }
         .onAppear{
-            let data = manager.getSavedData() //this one doesn't need to do await because it's nonIsolated
+            let zdata = manager.getSavedData() //this one doesn't need to do await because it's nonIsolated
             //Actor are always isolated and if u want to acess the func or value of actor, u have to await
             Task{
                 let data = await manager.data //this one need to do await because of the actor

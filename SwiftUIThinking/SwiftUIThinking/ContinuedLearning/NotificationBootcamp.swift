@@ -37,11 +37,6 @@ class NotificationManager{
         
         let content = UNMutableNotificationContent()
         
-        content.title = "This is my first notification"
-        content.subtitle = "This is description"
-        content.sound = .default
-        content.badge = 1
-        
         //time
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: time.timeIntervalSinceNow, repeats: false)
         

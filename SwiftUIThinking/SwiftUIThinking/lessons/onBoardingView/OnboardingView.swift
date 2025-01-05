@@ -43,6 +43,7 @@ struct OnboardingView: View {
     var body: some View {
         ZStack{
            //content
+            Color.brown
             ZStack{
                 switch onboardingState{
                 case 0:
